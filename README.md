@@ -1,4 +1,4 @@
-# **Kotlin-MVVM-Structure**
+# **Podcast Recorder**
 
 This is standard structure for all the upcoming android application. The structure contains all the key components for an android application. Below are the key components used in Structure.
 
