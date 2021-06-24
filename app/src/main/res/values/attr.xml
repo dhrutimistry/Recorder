@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomTextView">
+        <attr name="font_name">
+            <enum name="regular" value="1" />
+            <enum name="medium" value="2" />
+            <enum name="semibold" value="3" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="CustomEditTextView">
+        <attr name="view_type">
+            <enum name="email" value="1" />
+            <enum name="password" value="2" />
+            <enum name="fname" value="3" />
+            <enum name="lname" value="4" />
+            <enum name="username" value="5" />
+            <enum name="confirmPassword" value="6" />
+            <enum name="mobileNo" value="7" />
+        </attr>
+    </declare-styleable>
+</resources>

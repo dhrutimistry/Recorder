@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="dashboardViewModel"
+            type="com.kotlin.mvvm.structure.ui.viewmodels.DashboardViewModel" />
+
+        <import type="android.view.View" />
+
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/theme_color">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/activity_recording_after_view"
+            android:visibility="visible"
+            android:background="@drawable/shape_background_rounded">
+
+            <com.oneclick.utils.library.custom_views.CustomTextView
+                android:id="@+id/desc_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_40sdp"
+                android:text="@string/text_desc"
+                android:textAlignment="center"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+            <com.imn.iivisu.PlayerVisualizer
+                android:id="@+id/visualizer"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:approximateBarDuration="75"
+                app:backgroundBarPrimeColor="@color/gray"
+                app:barWidth="2dp"
+                android:layout_margin="@dimen/_30sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/desc_text_view"
+                app:layout_constraintBottom_toTopOf="@+id/activity_recording_image_continue"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:loadedBarPrimeColor="@color/purple"
+                app:maxAmp="100"
+                app:spaceBetweenBar="5dp" />
+            <ImageView
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="@dimen/_45sdp"
+                android:id="@+id/activity_recording_image_play"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/desc_text_view"
+                app:layout_constraintBottom_toTopOf="@+id/activity_recording_image_continue"
+                android:padding="@dimen/_14sdp"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:background="@drawable/shape_rounded_background_action_button_gray"
+                android:src="@drawable/ic_play"
+                app:tint="@color/color_white" />
+
+
+
+            <ImageView
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:id="@+id/activity_recording_image_undo"
+                app:layout_constraintBottom_toTopOf="@+id/activity_recording_text_undo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/activity_recording_image_continue"
+                android:padding="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:background="@drawable/shape_rounded_background_action_button_gray"
+                android:src="@drawable/ic_undo"
+                app:tint="@color/color_white" />
+
+            <com.oneclick.utils.library.custom_views.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/activity_recording_text_undo"
+                android:text="@string/text_undo"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/activity_recording_image_undo"
+                app:layout_constraintEnd_toEndOf="@+id/activity_recording_image_undo"/>
+
+            <ImageView
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="@dimen/_45sdp"
+                android:id="@+id/activity_recording_image_continue"
+                app:layout_constraintBottom_toTopOf="@+id/activity_recording_text_continue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:padding="@dimen/_14sdp"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:background="@drawable/shape_rounded_background_action_button_orange"
+                android:src="@drawable/ic_microphone"
+                app:tint="@color/color_white" />
+
+            <com.oneclick.utils.library.custom_views.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/activity_recording_text_continue"
+                android:text="@string/text_continue"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/activity_recording_image_continue"
+                app:layout_constraintEnd_toEndOf="@+id/activity_recording_image_continue"/>
+
+
+            <ImageView
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:id="@+id/activity_recording_save"
+                app:layout_constraintBottom_toTopOf="@+id/activity_recording_text_save"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/activity_recording_image_continue"
+                android:padding="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:background="@drawable/shape_rounded_background_action_button_purple"
+                android:src="@drawable/ic_save"
+                app:tint="@color/color_white" />
+
+            <com.oneclick.utils.library.custom_views.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/activity_recording_text_save"
+                android:text="@string/text_save"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/activity_recording_save"
+                app:layout_constraintEnd_toEndOf="@+id/activity_recording_save"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/activity_player_bottom_save_view"
+                android:orientation="vertical"
+                android:elevation="@dimen/_10sdp"
+                android:visibility="gone"
+                android:background="@drawable/shape_background_rounded_white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:targetApi="lollipop">
+
+                <View
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="4dp"
+                    android:background="@color/color_hint"
+                    android:layout_margin="@dimen/_15sdp"
+                    android:layout_gravity="center"/>
+
+                <com.oneclick.utils.library.custom_views.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_save_your_recording"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/_14sdp"
+                    android:layout_gravity="center"/>
+
+                <com.oneclick.utils.library.custom_views.CustomEditTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/activity_player_edittext_name"
+                    android:layout_margin="@dimen/_20sdp"
+                    android:hint="Name"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/_12sdp"/>
+
+                <com.oneclick.utils.library.custom_views.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/activity_player_button_save"
+                    android:text="@string/text_save"
+                    android:paddingTop="@dimen/_8sdp"
+                    android:paddingBottom="@dimen/_8sdp"
+                    android:paddingStart="@dimen/_40sdp"
+                    android:paddingEnd="@dimen/_40sdp"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:background="@drawable/shape_rounded_background_button"/>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+</layout>

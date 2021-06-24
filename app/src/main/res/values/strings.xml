@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Recorder</string>
+    <string name="splash">Splash Screen</string>
+
+    <string name="text_no_data">No Data Available!</string>
+    <string name="text_loading_data">Loading Data...</string>
+
+    <!--General Strings-->
+    <string name="internet_error">Please check your internet connection and try again later.</string>
+    <string name="general_error">Oops Something went wrong, we will fix it soon...</string>
+    <string name="text_exit_title">Exit</string>
+    <string name="text_exit_information">Are you sure want to exit?</string>
+    <string name="text_logout_title">Logout</string>
+    <string name="text_logout_information">Are you sure want to logout?</string>
+    <string name="text_yes">Yes</string>
+    <string name="text_delete">Delete</string>
+    <string name="text_no">No</string>
+    <string name="text_cancel">Cancel</string>
+    <string name="text_ok">OK</string>
+
+    <string name="text_create_podcast">Create Podcast</string>
+    <string name="text_record">Record</string>
+    <string name="text_recording">Recording</string>
+    <string name="text_import_file">Import files</string>
+    <string name="text_publish">Publish</string>
+    <string name="text_undo">Undo</string>
+    <string name="text_continue">Continue</string>
+    <string name="text_stop">Stop</string>
+    <string name="text_save">Save</string>
+    <string name="text_save_your_recording">Save your recording</string>
+    <string name="text_preview">Preview your audio</string>
+    <string name="text_desc">You can save your recording as it is, or continue recording</string>
+
+</resources>
